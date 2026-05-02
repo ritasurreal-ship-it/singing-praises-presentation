@@ -1,0 +1,668 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usetheme{default}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{CJKutf8}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}         % Latin Modern serif font
+\usefonttheme{serif}
+\usepackage{appendixnumberbeamer}
+\newcommand{\sym}[1]{\ensuremath{^{#1}}}
+\newcommand{\zh}[1]{~{\tiny\mbox{\begin{CJK}{UTF8}{gbsn}#1\end{CJK}}}}
+
+% B&W palette
+\definecolor{mainblack}{HTML}{1A1A1A}
+\definecolor{darkgray}{HTML}{404040}
+\definecolor{lightgray}{HTML}{EFEFEF}
+
+% No colored backgrounds — white slides, black text
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=mainblack}
+\setbeamercolor{frametitle}{bg=white, fg=mainblack}
+\setbeamercolor{title}{fg=mainblack}
+\setbeamercolor{subtitle}{fg=darkgray}
+\setbeamercolor{author}{fg=darkgray}
+\setbeamercolor{alerted text}{fg=mainblack}
+\setbeamercolor{block title}{bg=lightgray, fg=mainblack}
+\setbeamercolor{block body}{bg=lightgray!50}
+\setbeamercolor{item}{fg=mainblack}
+
+% Hairline rule under frame title
+\setbeamertemplate{frametitle}{%
+  \vspace{0.4em}%
+  {\large\bfseries\insertframetitle}\\[-0.2em]%
+  {\color{darkgray}\rule{\textwidth}{0.4pt}}%
+  \vspace{0.2em}%
+}
+
+% Clean footer: slide number only, no nav symbols
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{%
+  \hfill{\footnotesize\color{darkgray}\insertframenumber}\hspace{1em}\vspace{0.4em}%
+}
+
+% Simple title page
+\setbeamertemplate{title page}{%
+  \vspace{2em}%
+  {\Large\scshape\inserttitle\par}%
+  \vspace{0.3em}%
+  {\color{darkgray}\rule{\textwidth}{0.4pt}} \\%
+  \vspace{0.5em}%
+  {\normalsize\color{darkgray}\insertsubtitle\par}%
+  \vspace{1.5em}%
+  {\small\insertauthor\par}%
+  \vspace{0.3em}%
+  {\small\color{darkgray}\insertdate\par}%
+}
+
+\title{Singing Praises of Our Time}
+\subtitle{Measuring Individualism through Song Lyrics in China, 1950-2000}
+\author{}
+\date{}
+\institute{}
+
+\begin{document}
+
+%--- Title Slide -----------------------------------------------------------
+\maketitle
+
+%--- Slide 1: Motivation (China hook) -------------------------------------
+\begin{frame}{China, 1966--1989: A Cultural Arc}
+
+  \textbf{The Cultural Revolution (1966--76): erasure of private life}
+  \begin{itemize}
+    \item Millions killed, imprisoned or sent to labor camps (MacFarquhar \& Schoenhals 2006)
+    \item 16 million urban youth forcibly relocated to the countryside (Bernstein 1977; Xu 2013)
+    \item Private enterprise, religious practice, and family-based farming abolished
+    %\item the individual's economic fate entirely determined by collective assignment
+  \end{itemize}
+
+  \vspace{0.6em}
+  \textbf{1978 Reforms: the fastest de-collectivisation in history}
+  \begin{itemize}
+    \item By 1984, \textbf{99\%} of farm households transitioned to individual farming under the Household Responsibility System (Lin, \textit{AER} 1992)
+    \item Private enterprises: from essentially zero in 1978 to \textbf{22 million} registered by 1993 (Naughton 2007)
+  \end{itemize}
+
+  \vspace{0.6em}
+  \textit{How did cultural values respond to the sharp transformations?}
+\end{frame}
+
+%--- Slide 2: This Paper --------------------------------------------------
+\begin{frame}{This Paper}
+  \textbf{This project:} use \alert{song lyrics} as a real-time, mass-produced cultural barometer
+  \begin{itemize}
+    \item Low cost of circulation; no literacy required
+    \item Sentiment-laden by design
+    \item Informative precisely where surveys are not
+    \item A conduit for ideas even when other channels were thin
+    \item Especially important in the Chinese context
+  \end{itemize}
+  \vspace{3pt}
+\begin{block}{Research Question}
+  \begin{itemize}
+    \item Document temporal trend of individualism from 1950-2000 
+    \item Did China's post-1978 economic reforms \textbf{increase individualism} in popular culture, captured in pop song lyrics?
+  \end{itemize}
+  
+\end{block}
+\end{frame}
+
+%--- Slide 2: Research Question --------------------------------------------
+
+\begin{frame}{Our Context}
+  \textbf{Why China?}
+    \begin{itemize}
+      \item Extraordinary institutional upheavals, followed by the substantial growth episode in history
+      \item \textcolor{red}{Cultural change in an autocracy}
+      \end{itemize}
+
+\vspace{0.6em}
+  \textbf{Why individualism?}
+    \begin{itemize}
+    \item A cultural trait attributed to developed societies but considered absent in pre-modern ones
+    \begin{itemize}
+    \item \textcolor{red}{driver of innovation, financial market developments, and ultimately, growth} 
+    \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{\textcolor{red}{Literature}}
+\small
+\begin{enumerate}
+  \item \textbf{Culture $\leftrightarrow$ Institutions \& Economic Development}
+  \begin{itemize}
+    \item \textit{Economic shocks reshape culture:} Alesina \& Fuchs-Sch\"{u}ndeln (2007); Giuliano \& Spilimbergo (2014); Weigand, Mohr \& Cantoni (2025)
+    \item \textit{Gap:} existing studies rely on retrospective surveys — \alert{poorly suited to censored environments} and unable to track values in real time
+  \end{itemize}
+  \vspace{0.3em}
+  \item \textbf{Economic consequences of individualism:} Gorodnichenko \& Roland (2017); Bazzi, Fiszbein \& Gebresilasse (2020)
+  \begin{itemize}
+    \item \textit{Gap:} how individualism \textit{arises} from market reforms remains largely unexamined
+  \end{itemize}
+  \vspace{0.3em}
+  \item \textbf{Long-run Measures of Culture via text-as-data}: Michel et al.\ (2011); Michalopoulos \& Rauh (2024); Voth \& Yanagizawa-Drott (2024); Gorin, Heblich \& Zylberberg (2025)
+  \begin{itemize}
+    \item \textit{This paper:} mass-produced popular lyrics as a \alert{real-time, censorship-robust} cultural barometer
+  \end{itemize}
+\end{enumerate}
+\end{frame}
+
+%--- Slide 3a: Pre-Reform Context ------------------------------------------
+\begin{frame}{Pre-Reform China: The Command Economy}
+
+\begin{itemize}\setlength\itemsep{0.7em}
+  \item \textbf{Danwei (work-unit) system:} employment, housing, healthcare, and social
+    identity all assigned by the state — the individual's life determined entirely by
+    collective membership
+  \item \textbf{People's communes:} collective farming abolished private land; output
+    distributed by work-points, not individual effort (Lin, \textit{AER} 1992)
+  \item \textbf{Cultural Revolution (1966–76):} private enterprise and family-based loyalty
+    subordinated to party collective; 16 million urban youth forcibly relocated to the
+    countryside (Bernstein 1977)
+  \item \textbf{Cultural production:} all music, literature, and film produced and
+    distributed through state apparatus — individual expression subordinated to
+    collective ideology
+\end{itemize}
+
+\end{frame}
+
+%--- Slide 3b: Post-Reform Context -----------------------------------------
+\begin{frame}{Post-Reform China: Market Liberalisation}
+
+\begin{itemize}\setlength\itemsep{0.7em}
+  \item \textbf{Household Responsibility System:} by 1984, 99\% of farm households
+    contracted individual plots — restoring personal economic agency after decades of
+    collective farming (Lin, \textit{AER} 1992)
+  \item \textbf{Labour mobility:} hukou relaxation enabled large-scale internal migration;
+    workers made individual choices about where and how to work
+  \item \textbf{Private enterprise:} from essentially zero to 22 million registered firms
+    by 1993 — individual risk-taking rewarded for the first time (Naughton 2007)
+  \item \textbf{``Iron rice bowl'' fractured:} state guarantees of lifetime employment
+    withdrawn — individual initiative, risk, and reward entered everyday life
+\end{itemize}
+
+\vspace{0.5em}
+\begin{center}
+  \textit{Restructured economic incentives $\Rightarrow$ reshaped preferences $\Rightarrow$ cultural change}
+\end{center}
+\end{frame}
+
+%--- Slide 4: Evolution of Chinese Pop Music --------------------------------
+\begin{frame}{Pop Songs in China: 1960-2000}
+%some citations here on stylized facts
+Context: long tradition of speaking to the society via lyrics
+Changing sentiments:
+\vspace{1pt}
+\small
+\footnotesize \begin{block}{\textit{The Proletarian Cultural Revolution is Good}: a hit song in the 60s}
+    The proletarian Cultural Revolution is good/It’s good it’s good it’s good!/Under the great leadership of Chairman Mao/We are so joyful
+    \end{block}
+    \begin{block}{\textit{I Love You, China}: a well-known patriotic song in the early 80s}
+    I love you, China/I love your sprouts thriving in the spring/I love your golden harvests in the autumn/I love the character of your green pines/I love the integrity of your red plums
+    \end{block}
+    \begin{block}{\textit{Nothing to My Name}: unofficial anthem of the \textit{Tiananmen}}
+    You say you don’t want to live like this anymore/Your heart is full of pain/You say you don’t want to look back/Your tears are welling in your eyes/I want to give you my pursuit/and my freedom/But you always laugh at me/because I have nothing
+    \end{block}
+%a shorthand for moral and political disillusionment, resonating deeply with the student protesters at Tiananmen Square
+\end{frame}
+
+%--- Slide 5: Data ---------------------------------------------------------
+\begin{frame}{Data}
+  \textbf{Primary corpus:} Chinese pop-song lyrics, \textbf{1950–2000}
+  \begin{itemize}
+    \item Scraped from \textit{NetEase Cloud Music}, manually complemented
+    \begin{itemize}
+        \item Top 40 singers of each decade from 1970--2000
+        \item \textcolor{red}{other sources}
+    \end{itemize}
+    \item Full lyrics text + metadata: title, artist, release year
+    \item \textbf{3,324 songs} in full corpus; \textbf{1,723 songs} in regression sample
+  \end{itemize}
+
+  \vspace{0.5em}
+  \textbf{Lyricist attributes:}
+  \begin{itemize}
+    \item Province of birth matched to province-level treatment intensity
+    \item Birth year, biographical information (partial coverage)
+  \end{itemize}
+
+  \textcolor{red}{Provincial leader data}
+\end{frame}
+
+%--- Slide 5b: Word Clouds --------------------------------------------------
+\begin{frame}{Shifting Vocabulary by Decade}
+\begin{center}
+  \includegraphics[width=\textwidth, height=0.58\textheight, keepaspectratio]{figures/wordcloud_by_decade.png}
+\end{center}
+
+\vspace{0.2em}
+\begin{center}
+\small
+\begin{tabular}{p{2.4cm}p{3.1cm}p{2.75cm}p{2.4cm}p{2.75cm}}
+  \textbf{1950s} & \textbf{1960s} & \textbf{1970s} & \textbf{1980s} & \textbf{1990s} \\[4pt]
+  the~people\zh{人民}        & Chairman~Mao\zh{毛主席}    & Chairman~Mao\zh{毛主席}  & hometown\zh{故乡}  & myself\zh{自己}   \\[4pt]
+  motherland\zh{祖国}        & revolution\zh{革命}        & the~people\zh{人民}      & mama\zh{妈妈}      & world\zh{世界}    \\[4pt]
+  bliss\zh{幸福}             & Communist~Party\zh{共产党} & revolution\zh{革命}      & forever\zh{永远}   & solitude\zh{寂寞} \\
+\end{tabular}
+\end{center}
+\end{frame}
+
+%--- Slide 6c: Genre by Decade --------------------------------------------
+\begin{frame}{Descriptive Evidence: Genre Composition by Decade}
+  \includegraphics[width=0.63\textwidth, keepaspectratio]{figures/genre/0502/genre_by_decade_v1.png}
+  
+  \small
+  \textbf{Pre-reform dominance:}
+  \begin{itemize}
+  \item Revolutionary songs account for \textbf{63--76\%} of the sample in the 1950s--70s
+  \end{itemize}
+  \textbf{Post-reform collapse}
+  \begin{itemize}
+  \item By the 1980s, revolutionary share falls to \textbf{3\%}; pop rises to \textbf{71\%} and reaches \textbf{94\%} in the 1990s
+  \end{itemize}
+\end{frame}
+
+%--- Slide 6b: Topic Model ------------------------------------------------
+\begin{frame}{Descriptive Evidence: Thematic Composition over Time}
+  \includegraphics[width=0.83\textwidth, height=0.78\textheight, keepaspectratio]{figures/topic_model/0501/topic_proportions_v1.png}
+  
+  \small
+  \textbf{Compositional shift}
+  \begin{itemize}
+  \item  Revolutionary content collapses sharply after 1982
+  \end{itemize}
+  \textbf{Diversification}
+  \begin{itemize}
+  \item No single theme comes to dominate; the vacated space is filled by multiple genres simultaneously \\[0.4em]
+  \end{itemize}
+\end{frame}
+
+%--- Slide 6: Measurement Overview -----------------------------------------
+\begin{frame}[label=slide-dictmeasures]{Measuring Individualism: Dictionary-based Approaches}
+
+Goal: continuous score per song $\in [-1,+1]$ that consistently captures individualism.
+
+\vspace{0.4em}
+  \begin{itemize}
+    \item \textbf{Raw Count Net Score}
+      $$S_{\text{raw}} = \frac{I - C}{I + C}$$
+      Counts of dictionary hits for individualism ($I$) and collectivism ($C$).
+    \vspace{0.3em}
+    \item \textbf{TF-IDF Net Score}
+      $$S_{\text{tfidf}} = \frac{W_I - W_C}{W_I + W_C}$$
+      TF-IDF weights over dictionary terms. Down-weights ubiquitous words (e.g., ``we'').
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Normalization}
+  \textbf{Why this normalisation?}
+    \footnotesize
+    \begin{enumerate}
+      \item \textbf{Controls for song length:} dividing by $I+C$ measures relative balance, not raw counts
+      \item \textbf{Bounded in $[-1,+1]$:} pure individualist $= +1$; pure collectivist $= -1$; no dictionary hits $= 0$
+      \item \textbf{Symmetric:} same denominator on both sides — no directional inflation
+    \end{enumerate}
+
+\vspace{0.4em}
+\hyperlink{appendix-indiv-dict}{\beamergotobutton{Individualism Dictionary}}
+\hspace{0.3em}
+\hyperlink{appendix-collec-dict}{\beamergotobutton{Collectivism Dictionary}}
+\end{frame}
+
+\begin{frame}[label=slide-embeddingmeasures]{Measuring Individualism: Embedding Approaches}
+\begin{itemize}
+  \item Corpus-Trained Embedding Score
+
+    Word2Vec skip-gram (dim 300) trained on lyrics. Cosine distance from individualism vs.\ collectivism seed vectors.
+\end{itemize}
+\vspace{0.5em}
+\hyperlink{appendix-collec-dict}{\beamergotobutton{Embedding Seed Words}}
+\end{frame}
+
+%--- Slide 7: Descriptive Evidence — Distribution --------------------------
+\begin{frame}{Descriptive Evidence: Score Distributions}
+\begin{center}
+  \includegraphics[width=\textwidth, height=\textheight, keepaspectratio]{figures/score_dist/0501/score_distributions_v2.png}
+\end{center}
+
+\end{frame}
+
+%--- Slide 8: Descriptive Evidence — Time Trends ---------------------------
+\begin{frame}{Descriptive Evidence: Individualism Over Time}
+
+  \includegraphics[width=\textwidth, height=\textheight, keepaspectratio]{figures/time_trend/0501/time_trend_v1.png}
+\end{frame}
+
+%--- Slide 9: Descriptive Evidence — Space --------------------------------
+\begin{frame}{Descriptive Evidence: Individualism Over Space}
+
+  \includegraphics[width=\textwidth, height=\textheight, keepaspectratio]{figures/maps_overall/0501/province_map_v1.png}
+
+\end{frame}
+
+%--- Slide 10: Identification Strategy ------------------------------------
+\begin{frame}{Empirical Strategy: Identification}
+
+\textbf{Core idea:} exploit \textbf{differential adoption} of market reforms across provinces via the 1982–84 cadre replacement campaign.
+
+\vspace{0.4em}
+\textbf{Treatment — \texttt{ReformExposure}$_{p,y}$:}
+\begin{itemize}
+  \item Percentage decline in provincial leaders from the \textit{Mao cohort} during the 1982–84 turnover window
+  \item $\uparrow$ \texttt{ReformExposure}$_{p,y}$ $\Rightarrow$ $\uparrow$ displacement of Mao-era leadership $\Rightarrow$ \alert{$\uparrow$ reform exposure}
+  \item Interacted with a post-1982 indicator
+\end{itemize}
+
+\vspace{0.4em}
+\textbf{Key identifying assumption} \\ $\Rightarrow$
+cadre replacement should not be correlated with local cultural development
+\vspace{-0.4em}
+\begin{itemize}
+  \item Top-down, not driven by local conditions
+  \item Institutional response to political screening constraints
+\end{itemize}
+
+\end{frame}
+
+%--- Slide 10: Specification -----------------------------------------------
+\begin{frame}{Empirical Strategy: Specification}
+
+\textbf{Baseline regression:}
+\begin{equation*}
+  \text{Individualism}_{s(p,y)} = \beta \cdot \texttt{ReformExposure}_{p,y} + \text{Post}_y \cdot \ln\text{GDP}_{1981,p} + \lambda_p + \sigma_y + \varepsilon
+\end{equation*}
+\vspace{-0.3em}
+where $s(p,y)$ indexes song $s$ produced in province $p$ in year $y$.
+
+\vspace{0.8em}
+\textbf{Alternative Hypothesis}
+\begin{itemize}
+  \item Nationwide ideological relaxation post-Cultural Revolution would produce synchronous increases across all provinces — absorbed by \textbf{year fixed effects}.
+  \item A comeback of sentiments: more open places express higher individualism unconstrained, post-relaxation \\
+    $\hookrightarrow$ but cadre turnover should be exogeneous
+\end{itemize}
+\end{frame}
+
+%--- Slide 11: Results — Raw & TF-IDF -------------------------------------
+\begin{frame}{Results: Raw Count \& TF-IDF Scores}
+\begin{center}
+\resizebox{!}{0.43\textheight}{%
+\begin{tabular}{lccc}
+\toprule
+ & (1) & (2) & (3) \\
+ & Baseline & + Lyricist FE & + Area-Year FE \\
+\midrule
+\multicolumn{4}{l}{\textit{Panel A: Raw Net Score}} \\[2pt]
+ReformExposure  &       0.026\sym{**} &       0.027         &       0.054\sym{**} \\
+                &     (0.011)         &     (0.023)         &     (0.023)         \\
+\hline
+Mean dep.\ var. &      -0.066         &      -0.038         &      -0.043         \\
+
+\addlinespace[4pt]
+\multicolumn{4}{l}{\textit{Panel B: TF-IDF Net Score}} \\[2pt]
+\hline
+ReformExposure  &       0.025\sym{*}  &       0.016         &       0.067\sym{***}\\
+                &     (0.014)         &     (0.026)         &     (0.020)         \\
+\hline
+Mean dep.\ var. &       0.044         &       0.078         &       0.063         \\
+\midrule
+Observations    &        1208         &        1064         &        1164         \\
+Province FE  & Yes & Yes & Yes \\
+Year FE      & Yes & Yes & Yes \\
+Lyricist FE  & No  & Yes & No  \\
+Area-Year FE & No  & No  & Yes \\
+\bottomrule
+\end{tabular}%
+}
+\end{center}
+\footnotesize Full sample with GDP control. SE clustered at province level. $^{*}$ $p<0.10$, $^{**}$ $p<0.05$, $^{***}$ $p<0.01$
+\end{frame}
+
+%--- Slide 12: Results — Embeddings ----------------------------------------
+\begin{frame}{Results: Corpus-Trained Embeddings \& FastText}
+\begin{center}
+\resizebox{!}{0.43\textheight}{%
+\begin{tabular}{lccc}
+\toprule
+ & (1) & (2) & (3) \\
+ & Baseline & + Lyricist FE & + Area-Year FE \\
+\midrule
+\multicolumn{4}{l}{\textit{Panel A: Word2Vec Score}} \\[2pt]
+ReformExposure  &       0.010\sym{***}&       0.011\sym{***}&       0.017\sym{**} \\
+                &     (0.003)         &     (0.003)         &     (0.007)         \\
+\hline
+Mean dep.\ var. &       0.066         &       0.078         &       0.074         \\
+
+\addlinespace[4pt]
+\multicolumn{4}{l}{\textit{Panel B: FastText Score}} \\[2pt]
+\hline
+ReformExposure  &       0.001         &      -0.002         &       0.005\sym{***}\\
+                &     (0.001)         &     (0.003)         &     (0.002)         \\
+\hline
+Mean dep.\ var. &       0.079         &       0.082         &       0.081         \\
+\midrule
+Observations    &        1207         &        1063         &        1163         \\
+Province FE  & Yes & Yes & Yes \\
+Year FE      & Yes & Yes & Yes \\
+Lyricist FE  & No  & Yes & No  \\
+Area-Year FE & No  & No  & Yes \\
+\bottomrule
+\end{tabular}%
+}
+\end{center}
+\footnotesize Full sample with GDP control. SE clustered at province level. $^{*}$ $p<0.10$, $^{**}$ $p<0.05$, $^{***}$ $p<0.01$
+\end{frame}
+
+%--- Slide 13: Discussion --------------------------------------------------
+\begin{frame}{Discussion \& Interpretation}
+
+  \textbf{Summary of findings:}
+  \begin{itemize}
+    \item Robust positive relationship between reform intensity and lyrical individualism across three of four measures
+  \item Negative coeff. on GDP interaction \\
+  $\Rightarrow$ Provinces that were better-off during the CR were \emph{also} those with higher collectivism, and experienced a \emph{smaller} individualism rise under reform. Suggests reform operated through structural change rather than income growth alone.
+  \end{itemize}
+\end{frame}
+
+%--- Slide 14: Next Steps --------------------------------------------------
+\begin{frame}{Next steps and Limitations}
+\begin{itemize}
+  \item Next on:
+  \begin{itemize}
+    \item Alternative channel: CR intensity $\Rightarrow$ CR death data as control
+    \item Declining collectivism? $\Rightarrow$ decompose the scores and run separate regressions
+    \item Staggered policy implementation
+  \end{itemize}
+  \item Limitations:
+  \begin{itemize}
+    \item Cannot speak to supply and demand  
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+%--- Slide 15: Conclusion --------------------------------------------------
+\begin{frame}{Conclusion}
+
+
+\end{frame}
+
+%--- Appendix ---------------------------------------------------------------
+\appendix
+
+%-- Individualism Dictionary: Chinese --
+\begin{frame}[label=appendix-indiv-dict]{Appendix: Individualism Dictionary}
+\footnotesize
+\begin{columns}[T]
+\begin{column}{0.50\textwidth}
+  \textbf{Self / Identity (7)} \\
+  \begin{CJK}{UTF8}{gbsn}自己、自我、真我、本我、我就是我、我是我、我是谁\end{CJK}
+
+  \smallskip
+  \textbf{Agency / Choice (19)} \\
+  \begin{CJK}{UTF8}{gbsn}我想、我想要、我只想、我要、我就要、我还要、我决定、我选择、我做主、随心、随性、随我、属于我、我的路、我的世界、我的人生、等着我、我不想、我不愿\end{CJK}
+
+  \smallskip
+  \textbf{Freedom / Autonomy (4)} \\
+  \begin{CJK}{UTF8}{gbsn}自由、释放、无拘无束、不受束缚\end{CJK}
+
+  \smallskip
+  \textbf{Independence / Self-Reliance (4)} \\
+  \begin{CJK}{UTF8}{gbsn}独自、独立、一个人、倔强\end{CJK}
+\end{column}
+\begin{column}{0.48\textwidth}
+  \textbf{Self-Expression / Interiority (3)} \\
+  \begin{CJK}{UTF8}{gbsn}我的心、寂寞、孤独\end{CJK}
+
+  \smallskip
+  \textbf{Defiance / Non-Conformity (8)} \\
+  \begin{CJK}{UTF8}{gbsn}不在乎、无所谓、不管别人怎么说、别管我、我行我素、不妥协、不低头、不后悔\end{CJK}
+
+  \smallskip
+  \textbf{Search \& Wandering (14)} \\
+  \begin{CJK}{UTF8}{gbsn}寻找、追寻、寻觅、寻梦、远方、天涯、浪迹、远行、归途、漂泊、游子、流浪、出走、闯荡\end{CJK}
+
+  \smallskip
+  \textit{$\sim$58 unique terms after deduplication.}
+\end{column}
+\end{columns}
+
+\vspace{0.4em}
+\hyperlink{slide-dictmeasures}{\beamerreturnbutton{Back}}
+\hfill
+\hyperlink{appendix-indiv-dict-en}{\beamergotobutton{English Translations}}
+\hspace{0.3em}
+\hyperlink{appendix-collec-dict}{\beamergotobutton{Collectivism Dictionary}}
+\end{frame}
+
+%-- Individualism Dictionary: English --
+\begin{frame}[label=appendix-indiv-dict-en]{Appendix: Individualism Dictionary (English)}
+\footnotesize
+\begin{columns}[T]
+\begin{column}{0.50\textwidth}
+  \textbf{Self / Identity} \\
+  \textit{oneself, self, true self, id/primal self, I am who I am, I am me, who am I}
+
+  \smallskip
+  \textbf{Agency / Choice} \\
+  \textit{I want, I want to, I only want, I will, I insist, I still want, I decide, I choose, I'm in charge, follow my heart, follow my nature, as I please, belongs to me, my path, my world, my life, wait for me, I don't want, I'm unwilling}
+
+  \smallskip
+  \textbf{Freedom / Autonomy} \\
+  \textit{freedom, release, unrestrained, unfettered}
+
+  \smallskip
+  \textbf{Independence / Self-Reliance} \\
+  \textit{alone, independent, by myself, unyielding}
+\end{column}
+\begin{column}{0.48\textwidth}
+  \textbf{Self-Expression / Interiority} \\
+  \textit{my heart, loneliness, solitude}
+
+  \smallskip
+  \textbf{Defiance / Non-Conformity} \\
+  \textit{don't care, doesn't matter, no matter what others say, don't mind me, do as I please, no compromise, won't bow down, no regrets}
+
+  \smallskip
+  \textbf{Search \& Wandering} \\
+  \textit{search, pursue, seek, dream-seeking, faraway, horizon/ends of the earth, wandering, journey afar, homeward path, drifting, wanderer, roaming, departure, venture out}
+\end{column}
+\end{columns}
+
+\vspace{0.4em}
+\hyperlink{appendix-indiv-dict}{\beamerreturnbutton{Chinese Terms}}
+\hfill
+\hyperlink{appendix-collec-dict}{\beamergotobutton{Collectivism Dictionary}}
+\end{frame}
+
+%-- Collectivism Dictionary: Chinese --
+\begin{frame}[label=appendix-collec-dict]{Appendix: Collectivism Dictionary \& Embedding Seeds}
+\footnotesize
+\begin{columns}[T]
+\begin{column}{0.50\textwidth}
+  \textbf{Group / People (23)} \\
+  \begin{CJK}{UTF8}{gbsn}我们、咱、大家、众人、人们、彼此、同伴、伙伴、同类、同道、同仁、朋友们、兄弟、哥们、弟兄、姐妹、儿女、战友、搭档、队友、同盟、同心人、同舟人\end{CJK}
+
+  \smallskip
+  \textbf{Togetherness / Action (28)} \\
+  \begin{CJK}{UTF8}{gbsn}一起、一同、共同、同在、同心、齐心、同频、同路、同行、并肩、携手、手牵手、握手、相伴、陪伴、作伴、相随、相守、守候、守望、守护、守住、相依、依靠、依偎、依恋、相拥、拥抱\end{CJK}
+
+  \smallskip
+  \textbf{Idioms (6)} \\
+  \begin{CJK}{UTF8}{gbsn}同甘共苦、风雨同舟、同舟共济、荣辱与共、患难与共、生死与共\end{CJK}
+\end{column}
+\begin{column}{0.48\textwidth}
+  \textbf{Collective Entities (13)} \\
+  \begin{CJK}{UTF8}{gbsn}集体、群体、团体、团队、队伍、组织、社群、社区、村里、乡里、同乡会、乡亲、父老\end{CJK}
+
+  \smallskip
+  \textbf{Political / National (12)} \\
+  \begin{CJK}{UTF8}{gbsn}人民、同胞、家国、祖国、民族、山河、河山、国土、家园、故土、领袖、中国\end{CJK}
+
+  \smallskip
+  \textbf{Miscellaneous (6)} \\
+  \begin{CJK}{UTF8}{gbsn}奉献、社里、团结、一条心、全民、亲人\end{CJK}
+
+  \smallskip
+  \begin{block}{Embedding Seed Words (Word2Vec \& FastText)}
+    \textbf{Indiv.:} \begin{CJK}{UTF8}{gbsn}我、自己、自由、选择、孤独、寂寞\end{CJK} \\
+    \textbf{Collec.:} \begin{CJK}{UTF8}{gbsn}咱、大家、团结、共同、一起\end{CJK}
+  \end{block}
+\end{column}
+\end{columns}
+
+\vspace{0.3em}
+\hyperlink{appendix-indiv-dict}{\beamergotobutton{Individualism Dictionary}}
+\hfill
+\hyperlink{appendix-collec-dict-en}{\beamergotobutton{English Translations}}
+\hspace{0.3em}
+\hyperlink{slide-embeddingmeasures}{\beamerreturnbutton{Back}}
+\end{frame}
+
+%-- Collectivism Dictionary: English --
+\begin{frame}[label=appendix-collec-dict-en]{Appendix: Collectivism Dictionary \& Embedding Seeds (English)}
+\scriptsize
+\begin{columns}[T]
+\begin{column}{0.50\textwidth}
+  \textbf{Group / People} \\
+  \textit{we, we (informal), everyone, all people, people, each other, companion, partner, peers, like-minded, colleagues, friends, brothers, buddies, brethren, sisters, sons and daughters, comrades, partner, teammates, alliance, kindred spirits, fellow voyagers}
+
+ 
+  \textbf{Togetherness / Action} \\
+  \textit{together, jointly, in common, together in presence, united in heart, of one mind, in sync, on the same path, travel together, side by side, hand in hand, hold hands, shake hands, accompany, company, keep company, follow along, stay together, wait for, watch over, protect, hold on to, lean on each other, rely on, nestle, attachment, embrace each other, embrace}
+
+
+  \textbf{Idioms} \\
+  \textit{share joys and sorrows, weather storms together, pull together through adversity, share glory and disgrace, stand together in hardship, share life and death}
+\end{column}
+\begin{column}{0.48\textwidth}
+  \textbf{Collective Entities} \\
+  \textit{collective, group, organization, team, troop, organization, community, neighborhood, village, township, villagers' association, fellow villagers, village elders}
+
+
+  \textbf{Political / National} \\
+  \textit{the people, compatriots, homeland-nation, motherland, nation/ethnicity, mountains and rivers, rivers and mountains, national territory, homeland, native soil, leader, China}
+
+
+  \textbf{Miscellaneous} \\
+  \textit{dedication, commune, unity, of one mind, all citizens, loved ones}
+
+
+  \begin{block}{Embedding Seed Words}
+    \textbf{Indiv.:} \textit{I, oneself, freedom, choice, solitude, loneliness} \\
+    \textbf{Collec.:} \textit{we, everyone, unity, in common, together}
+  \end{block}
+\end{column}
+\end{columns}
+
+\vspace{0.3em}
+\hyperlink{appendix-collec-dict}{\beamerreturnbutton{Chinese Terms}}
+\hfill
+\hyperlink{appendix-indiv-dict}{\beamergotobutton{Individualism Dictionary}}
+\end{frame}
+
+\end{document}
