@@ -117,17 +117,16 @@
 \begin{frame}{Our Context}
   \textbf{Why China?}
     \begin{itemize}
-      \item Extraordinary institutional upheavals, followed by the substantial growth episode in history
-      \item \textcolor{red}{Cultural change in an autocracy}
+      \item Extraordinary institutional upheavals, followed by successful economic reform which generated substantial growth episode
+      \item Changes in economic institutions, not ideological shift 
+      \item No regime change
       \end{itemize}
 
 \vspace{0.6em}
   \textbf{Why individualism?}
     \begin{itemize}
     \item A cultural trait attributed to developed societies but considered absent in pre-modern ones
-    \begin{itemize}
-    \item \textcolor{red}{driver of innovation, financial market developments, and ultimately, growth} 
-    \end{itemize}
+    \item Driver of innovation, financial market developments, and ultimately, growth
     \end{itemize}
 \end{frame}
 
@@ -265,6 +264,7 @@ Changing sentiments:
   \begin{itemize}
   \item By the 1980s, revolutionary share falls to \textbf{3\%}; pop rises to \textbf{71\%} and reaches \textbf{94\%} in the 1990s
   \end{itemize}
+  \textcolor{red}{no drastic change from 1950 - 1966}
 \end{frame}
 
 %--- Slide 6b: Topic Model ------------------------------------------------
@@ -354,8 +354,7 @@ Change in cultural production pattern
       \item Centralised to decentralised cultural production:
       \begin{itemize}
       \item pre-1978, monopoly by the state-owned China Record Company 
-        \item post-1978, regional labels emerged
-        \item cassette tape technology enabled decentralized, informal distribution
+        \item post-1978, cassette tape technology enabled decentralized, informal distribution
       \end{itemize}
       \item Loosening of censorship:
       \begin{itemize}
@@ -364,7 +363,7 @@ Change in cultural production pattern
         gradually allowed
         \end{itemize}
     \end{itemize}
-    \vspace{5pt}
+    \vspace{2em}
 \normalsize
 \textbf{Changes in economic institutions spurred individualism}
 
@@ -397,7 +396,7 @@ cadre replacement should not be correlated with local cultural development
 %--- Slide 10: Specification -----------------------------------------------
 \begin{frame}{Empirical Strategy: Specification}
 
-\textbf{Baseline regression:}
+\textcolor{red}{\textbf{Baseline regression:}}
 \begin{equation*}
   \text{Individualism}_{s(p,y)} = \beta \cdot \texttt{ReformExposure}_{p,y} + \text{Post}_y \cdot \ln\text{GDP}_{1981,p} + \lambda_p + \sigma_y + \varepsilon
 \end{equation*}
@@ -405,13 +404,13 @@ cadre replacement should not be correlated with local cultural development
 where $s(p,y)$ indexes song $s$ produced in province $p$ in year $y$.
 
 \vspace{0.8em}
-\textbf{Alternative Hypothesis}
+\textcolor{red}{\textbf{Control variables:}}
 \begin{itemize}
-  \item Nationwide ideological relaxation post-Cultural Revolution would produce synchronous increases across all provinces — absorbed by \textbf{year fixed effects}.
-  \item A comeback of sentiments: more open places express higher individualism unconstrained, post-relaxation \\
-    $\hookrightarrow$ but cadre turnover should be exogeneous
+    \item 
 \end{itemize}
 \end{frame}
+
+
 
 %--- Slide 11: Results — Raw & TF-IDF -------------------------------------
 \begin{frame}{Results: Raw Count \& TF-IDF Scores}
@@ -481,6 +480,21 @@ Area-Year FE & No  & No  & Yes \\
 }
 \end{center}
 \footnotesize Full sample with GDP control. SE clustered at province level. $^{*}$ $p<0.10$, $^{**}$ $p<0.05$, $^{***}$ $p<0.01$
+\end{frame}
+
+\begin{frame}{Reform policy results}
+Data \\
+Classification \\
+Result
+
+\end{frame}
+
+\begin{frame}{Firm?}
+    
+\end{frame}
+
+\begin{frame}{Exposure years?}
+    
 \end{frame}
 
 %--- Slide 13: Discussion --------------------------------------------------
